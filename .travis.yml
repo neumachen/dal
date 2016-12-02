@@ -1,0 +1,13 @@
+dist: trusty
+sudo: required
+addons:
+  postgresql: "9.5"
+
+language: go
+go:
+  - 1.6
+  - 1.7
+
+script:
+  - go get github.com/mattn/goveralls
+  - make runtestcoveralls
